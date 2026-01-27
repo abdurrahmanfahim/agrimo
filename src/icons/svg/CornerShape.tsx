@@ -1,0 +1,17 @@
+import React from "react";
+
+const CornerShape = () => {
+  return (
+    <svg
+      width="30"
+      height="30"
+      viewBox="0 0 30 30"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M30 0H0C16 0 30 14 30 30V0Z" fill="currentColor" />
+    </svg>
+  );
+};
+
+export default CornerShape;
