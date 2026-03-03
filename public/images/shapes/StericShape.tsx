@@ -1,4 +1,4 @@
-const StericShape = ({className}: {className: string}) => {
+const StericShape = ({className}: {className?: string}) => {
   return (
     <svg
       width="18"
