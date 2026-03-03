@@ -40,10 +40,8 @@ const Navbar: React.FC = () => {
   };
 
   useEffect(() => {
-    // Add scroll listener on component mount
     window.addEventListener("scroll", changeBackground);
 
-    // Clean up listener on component unmount
     return () => {
       window.removeEventListener("scroll", changeBackground);
     };
@@ -56,11 +54,14 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="flex justify-between items-center pl-5 relative ">
-        <span className="absolute top-0 left-5 text-background -rotate-90 ">
+        <span className={`absolute top-0 left-5 text-background -rotate-90 ${navbarBg ? "hidden" : "block"} `}>
+          <CornerShape />
+        </span>
+        <span className={`absolute top-0 right-5 text-background ${navbarBg ? "hidden" : "block"} `}>
           <CornerShape />
         </span>
 
-        <div className="flex items-center gap-10 2xl:gap-15 pl-10 xl:py-0 py-5 ">
+        <div className="flex items-center gap-10 2xl:gap-15 pl-10 xl:py-0 py-1 ">
           <span>
             <Image src={logo} alt="logo-agrimo" />
           </span>
@@ -124,7 +125,7 @@ const Navbar: React.FC = () => {
             <BarIcon className="size-8" />
           </div>
           <nav
-            className={`absolute top-20 right-0 w-2/3 h-screen rounded-l-2xl bg-primary z-50 p-6 md:p-10 transition-all duration-500 ease-in-out ${open ? "translate-x-0" : "translate-x-full"}`}
+            className={`absolute top-20 right-0 w-2/3 h-screen rounded-l-2xl bg-primary z-50 p-6 md:p-10 transition-all duration-700 ease-in ${open ? "translate-x-0" : "translate-x-full"}`}
           >
             <div className="flex items-center rounded-full bg-background p-4 mb-6 text-text-color ">
               <span className="">

@@ -57,7 +57,7 @@ const Banner: React.FC = () => {
   ];
   return (
     <Container>
-      <div className="py-5 cursor-grab">
+      <section className="py-5 cursor-grab">
         <Swiper
           direction="vertical"
           slidesPerView={1}
@@ -102,14 +102,16 @@ const Banner: React.FC = () => {
                   variant="secondary"
                   href="/contact"
                   pos={<PlowIcon />}
+                  className="w-full justify-center sm:w-auto sm:justify-start"
                 />
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </section>
     </Container>
   );
 };
 
 export default Banner;
+

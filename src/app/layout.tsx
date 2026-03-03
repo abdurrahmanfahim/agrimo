@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Signika, Roboto } from "next/font/google";
 import "./globals.css";
+import Navbar from "../components/Navbar";
 
 const signika = Signika({
   variable: "--font-signika",
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body
         className={`${signika.variable} ${roboto.variable} antialiased`}
       >
+      <Navbar />
         {children}
       </body>
     </html>

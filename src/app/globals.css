@@ -8,7 +8,7 @@
   --primary: #5b8c51;
   --secondary: #eddd5e;
   --text-color: #404a3d;
-  --text-secondary: #666e64;
+  --text-secondary: #666666;
 }
 
 @theme inline {
@@ -91,4 +91,19 @@ body {
   /* This creates the ring */
   outline: 1px solid white;
   outline-offset: 4px; /* This creates the gap */
+}
+
+.marquee-text {
+font-family: 'Signika';
+font-style: normal;
+font-weight: 700;
+font-size: 100px;
+line-height: 120px;
+color: #F8F7F0;
+text-shadow: 1px 1px 0px rgba(64, 74, 61, 0.5), -1px -1px 0px rgba(64, 74, 61, 0.5), 1px -1px 0px rgba(64, 74, 61, 0.5), -1px 1px 0px rgba(64, 74, 61, 0.5), 1px 1px 0px rgba(64, 74, 61, 0.5);
+}
+
+
+.marquee-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
 }
