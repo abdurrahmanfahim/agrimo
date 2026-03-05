@@ -57,7 +57,7 @@ const Banner: React.FC = () => {
   ];
   return (
     <Container>
-      <section className="py-5 cursor-grab">
+      <section className="py-5 cursor-grab banner ">
         <Swiper
           direction="vertical"
           slidesPerView={1}

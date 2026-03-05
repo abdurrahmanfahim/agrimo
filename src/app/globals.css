@@ -38,55 +38,45 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.swiper-pagination {
+.banner .swiper-pagination {
   opacity: 1 !important;
   display: block !important;
 }
 
-.swiper-pagination-bullet {
+.banner .swiper-pagination-bullet {
   background: #000;
 }
-.swiper-pagination-bullet-active {
+.banner .swiper-pagination-bullet-active {
   background: var(--secondary);
 }
 
-.swiper-slide {
+.banner .swiper-slide {
   height: 100%;
 }
 
-/* globals.css বা styles.css এ যোগ করুন */
-
-.mySwiper {
+.banner .mySwiper {
   @apply w-full h-[400px] md:h-[500px] lg:h-[800px];
 }
 
-.mySwiper .swiper-slide {
+.banner .mySwiper .swiper-slide {
   @apply relative w-full h-full;
 }
 
-.mySwiper .swiper-pagination {
+.banner .mySwiper .swiper-pagination {
   @apply !right-12 !left-auto;
 }
 
-/* .mySwiper .swiper-pagination-bullet {
-  @apply size-0.5 bg-white !my-2 p-1;
-}
-
-.mySwiper .swiper-pagination-bullet-active {
-  @apply size-0.5 bg-gray-500 !my-2 p-4 ring-3 ring-white;
-} */
-
 /* Base style for all bullets */
 .swiper-pagination-bullet {
-  @apply size-2.5 !bg-white rounded-full transition-all duration-300 !my-4.5 sm:block!  hidden! ;
+  @apply size-2.5 !bg-white rounded-full transition-all duration-300 !my-4.5 sm:block!  hidden!;
   /* 'mb-4' gives vertical spacing if flex-col */
   background-color: white !important;
   opacity: 1 !important;
 }
 
 /* Active style (The Ring Effect) */
-.swiper-pagination-bullet-active {
-  @apply bg-white ;
+.banner .swiper-pagination-bullet-active {
+  @apply bg-white;
 
   /* This creates the ring */
   outline: 1px solid white;
@@ -94,16 +84,77 @@ body {
 }
 
 .marquee-text {
-font-family: 'Signika';
-font-style: normal;
-font-weight: 700;
-font-size: 100px;
-line-height: 120px;
-color: #F8F7F0;
-text-shadow: 1px 1px 0px rgba(64, 74, 61, 0.5), -1px -1px 0px rgba(64, 74, 61, 0.5), 1px -1px 0px rgba(64, 74, 61, 0.5), -1px 1px 0px rgba(64, 74, 61, 0.5), 1px 1px 0px rgba(64, 74, 61, 0.5);
+  font-family: "Signika";
+  font-style: normal;
+  font-weight: 700;
+  /* font-size: 100px;
+line-height: 120px; */
+  color: #f8f7f0;
+  text-shadow:
+    1px 1px 0px rgba(64, 74, 61, 0.5),
+    -1px -1px 0px rgba(64, 74, 61, 0.5),
+    1px -1px 0px rgba(64, 74, 61, 0.5),
+    -1px 1px 0px rgba(64, 74, 61, 0.5),
+    1px 1px 0px rgba(64, 74, 61, 0.5);
 }
-
 
 .marquee-swiper .swiper-wrapper {
   transition-timing-function: linear !important;
+}
+
+.services .mySwiper {
+  /* height: auto; */
+}
+
+.sub-heading {
+  @apply font-signika font-medium text-text-color text-3xl sm:text-[55px] sm:leading-15 mt-2;
+}
+
+/* Pagination container */
+#services .custom-pagination .swiper-pagination {
+  margin-top: 20px;
+  position: relative !important;
+}
+
+/* Normal dot */
+#services .custom-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #303030 !important; /* light gray */
+  opacity: 1;
+}
+
+/* Active dot */
+#services .custom-pagination .swiper-pagination-bullet-active {
+  background: #eddd5e !important; /* secondary color */
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Zoom the main active slide */
+#photos .swiper-slide-active img {
+  transform: scale(1.1);
+  overflow: visible;
+  z-index: 10; /* Ensure it stays on top of neighbors */
+}
+
+#photos .swiper-slide-active  {
+  padding: 0 10px; /* Add horizontal padding to create space for the zoom */
+  z-index: 5;
+  overflow: visible; /* Ensure the zoomed image can overflow without being cut off */
+}
+
+/* Optional: If you want the "next" slide also slightly zoomed */
+#photos .swiper-slide-next {
+  transform: scale(1.05);
+}
+
+/* Ensure images fill the container nicely */
+#photos .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
 }

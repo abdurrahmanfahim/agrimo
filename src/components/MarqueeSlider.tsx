@@ -14,12 +14,11 @@ const MarqueeSlider = () => {
   ];
 
   // Duplicate slides for smooth loop
-  const duplicatedSlides = [...slides, ...slides, ...slides];
+  const duplicatedSlides = [...slides, ...slides, ...slides,...slides, ...slides,...slides, ...slides,...slides, ...slides,...slides, ...slides,...slides, ...slides,...slides, ...slides,...slides, ...slides,...slides, ...slides,...slides, ...slides,...slides, ...slides,...slides, ...slides,...slides, ...slides,...slides, ...slides,...slides, ...slides,...slides];
 
   return (
     <Swiper
       modules={[Autoplay]}
-      slidesPerView="auto"
       spaceBetween={30}
       loop={true}
       speed={7000}
@@ -32,8 +31,8 @@ const MarqueeSlider = () => {
     >
       {duplicatedSlides.map((text, i) => (
         <SwiperSlide key={i} className="!w-auto">
-          <div className="marquee-text flex items-center gap-10 ">
-            {text} <StericShape className={'size-14'} />
+          <div className="marquee-text text-5xl md:text-[100px] flex items-center gap-10 py-1.5">
+            {text} <StericShape className={'size-8 md:size-14'} />
           </div>
         </SwiperSlide>
       ))}
