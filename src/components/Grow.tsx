@@ -7,7 +7,7 @@ import SectionHeading from "./SectionHeading";
 
 const Grow = () => {
   return (
-    <section id="grow" className="my-6.5 max-w-350 mx-auto">
+    <section id="grow" className="mt-6.5 mb-52 xl:mb-30 max-w-350 mx-auto">
       <div className="flex flex-col items-center justify-center gap-2 mb-12.5 mt-6 sm:mb-12.5 ">
         <SectionHeading>Grow Naturally</SectionHeading>
         <h5 className="sub-heading max-w-127 text-center ">
@@ -15,8 +15,8 @@ const Grow = () => {
         </h5>
       </div>
 
-      <div className="flex justify-center items-center gap-4 mb-12">
-        <div>
+      <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-4 mb-12">
+        <div className="md:flex-2 min-w-97 ">
           <div className="flex items-start gap-7.5 mb-6 max-w-100.5 ">
             <div className="p-3 lg:p-4 bg-secondary rounded-full  ">
               <TractorIcon />
@@ -47,7 +47,7 @@ const Grow = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className="flex-1 xl:flex-2 absolute opacity-20 xl:opacity-100 xl:relative -z-10 ">
           <Image
             src={"/images/section-images/corn-image.png"}
             alt="corn"
@@ -55,7 +55,7 @@ const Grow = () => {
             height={466}
           />
         </div>
-        <div>
+        <div className="md:flex-2 min-w-97 ">
           <div>
             <div className="flex items-start gap-7.5 mb-6 max-w-100.5 ">
               <div className="p-3 lg:p-4 bg-secondary rounded-full  ">

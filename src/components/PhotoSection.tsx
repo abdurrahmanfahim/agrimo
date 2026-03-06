@@ -2,38 +2,196 @@
 
 import Image from "next/image";
 import "swiper/css";
+import "swiper/css/autoplay";
+import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const PhotoSection = () => {
   return (
-    <section id="photos" className="m-10 ">
+    <section id="photos" className="m-10  ">
       <Swiper
-        slidesPerView={1.5} // Shows part of the next slide
-        centeredSlides={true} // Keeps the active slide in the middle
-        spaceBetween={30}
+        slidesPerView={2}
+        centeredSlides={true}
+        spaceBetween={10} // ফিগমা অনুযায়ী গ্যাপ এখানে সেট করুন
         loop={true}
-        breakpoints={{
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 4 }, // Adjust based on your image layout
+        speed={800}
+        slidesPerGroup={2}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
         }}
-        className="mySwiper"
+        modules={[Autoplay]}
+        breakpoints={{
+          640: {
+            slidesPerView: 2.5,
+            slidesPerGroup: 2,
+          },
+          1024: {
+            slidesPerView: 3.5,
+            slidesPerGroup: 2,
+          },
+        }}
+        className="mySwiper py-12"
       >
-        <SwiperSlide className="transition-transform duration-500">
-          <Image src="/images/portfolio-images/portfolio-img-01.jpg" className="rounded-2xl" width={462} height={421} alt="portfolio-image 01" />
-        </SwiperSlide> <SwiperSlide className="transition-transform duration-500">
-          <Image src="/images/portfolio-images/portfolio-img-02.jpg" className="rounded-2xl" width={462} height={421} alt="portfolio-image 02" />
-        </SwiperSlide> <SwiperSlide className="transition-transform duration-500">
-          <Image src="/images/portfolio-images/portfolio-img-03.jpg" className="rounded-2xl" width={462} height={421} alt="portfolio-image 03" />
-        </SwiperSlide> <SwiperSlide className="transition-transform duration-500">
-          <Image src="/images/portfolio-images/portfolio-img-04.jpg" className="rounded-2xl" width={462} height={421} alt="portfolio-image 04" />
-        </SwiperSlide><SwiperSlide className="transition-transform duration-500">
-          <Image src="/images/portfolio-images/portfolio-img-01.jpg" className="rounded-2xl" width={462} height={421} alt="portfolio-image 01" />
-        </SwiperSlide> <SwiperSlide className="transition-transform duration-500">
-          <Image src="/images/portfolio-images/portfolio-img-02.jpg" className="rounded-2xl" width={462} height={421} alt="portfolio-image 02" />
-        </SwiperSlide> <SwiperSlide className="transition-transform duration-500">
-          <Image src="/images/portfolio-images/portfolio-img-03.jpg" className="rounded-2xl" width={462} height={421} alt="portfolio-image 03" />
-        </SwiperSlide> <SwiperSlide className="transition-transform duration-500">
-          <Image src="/images/portfolio-images/portfolio-img-04.jpg" className="rounded-2xl" width={462} height={421} alt="portfolio-image 04" />
+        <SwiperSlide className="flex items-center justify-center transition-transform duration-500 ">
+          <div className="img-wrapper">
+            <Image
+              src="/images/portfolio-images/portfolio-img-01.jpg"
+              width={462}
+              height={430}
+              alt="portfolio-image 01"
+            />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center transition-transform duration-500 ">
+          <div className="img-wrapper">
+            <Image
+              src="/images/portfolio-images/portfolio-img-02.jpg"
+              width={462}
+              height={430}
+              alt="portfolio-image 02"
+            />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center transition-transform duration-500 ">
+          <div className="img-wrapper">
+            <Image
+              src="/images/portfolio-images/portfolio-img-03.jpg"
+              width={462}
+              height={430}
+              alt="portfolio-image 03"
+            />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center transition-transform duration-500 ">
+          <div className="img-wrapper">
+            <Image
+              src="/images/portfolio-images/portfolio-img-04.jpg"
+              width={462}
+              height={430}
+              alt="portfolio-image 04"
+            />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center transition-transform duration-500 ">
+          <div className="img-wrapper">
+            <Image
+              src="/images/portfolio-images/portfolio-img-01.jpg"
+              width={462}
+              height={430}
+              alt="portfolio-image 01"
+            />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center transition-transform duration-500 ">
+          <div className="img-wrapper">
+            <Image
+              src="/images/portfolio-images/portfolio-img-02.jpg"
+              width={462}
+              height={430}
+              alt="portfolio-image 02"
+            />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center transition-transform duration-500 ">
+          <div className="img-wrapper">
+            <Image
+              src="/images/portfolio-images/portfolio-img-03.jpg"
+              width={462}
+              height={430}
+              alt="portfolio-image 03"
+            />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center transition-transform duration-500 ">
+          <div className="img-wrapper">
+            <Image
+              src="/images/portfolio-images/portfolio-img-04.jpg"
+              width={462}
+              height={430}
+              alt="portfolio-image 04"
+            />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center transition-transform duration-500 ">
+          <div className="img-wrapper">
+            <Image
+              src="/images/portfolio-images/portfolio-img-01.jpg"
+              width={462}
+              height={430}
+              alt="portfolio-image 01"
+            />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center transition-transform duration-500 ">
+          <div className="img-wrapper">
+            <Image
+              src="/images/portfolio-images/portfolio-img-02.jpg"
+              width={462}
+              height={430}
+              alt="portfolio-image 02"
+            />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center transition-transform duration-500 ">
+          <div className="img-wrapper">
+            <Image
+              src="/images/portfolio-images/portfolio-img-03.jpg"
+              width={462}
+              height={430}
+              alt="portfolio-image 03"
+            />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center transition-transform duration-500 ">
+          <div className="img-wrapper">
+            <Image
+              src="/images/portfolio-images/portfolio-img-04.jpg"
+              width={462}
+              height={430}
+              alt="portfolio-image 04"
+            />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center transition-transform duration-500 ">
+          <div className="img-wrapper">
+            <Image
+              src="/images/portfolio-images/portfolio-img-01.jpg"
+              width={462}
+              height={430}
+              alt="portfolio-image 01"
+            />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center transition-transform duration-500 ">
+          <div className="img-wrapper">
+            <Image
+              src="/images/portfolio-images/portfolio-img-02.jpg"
+              width={462}
+              height={430}
+              alt="portfolio-image 02"
+            />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center transition-transform duration-500 ">
+          <div className="img-wrapper">
+            <Image
+              src="/images/portfolio-images/portfolio-img-03.jpg"
+              width={462}
+              height={430}
+              alt="portfolio-image 03"
+            />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center transition-transform duration-500 ">
+          <div className="img-wrapper">
+            <Image
+              src="/images/portfolio-images/portfolio-img-04.jpg"
+              width={462}
+              height={430}
+              alt="portfolio-image 04"
+            />
+          </div>
         </SwiperSlide>
       </Swiper>
     </section>

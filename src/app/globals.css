@@ -133,28 +133,52 @@ line-height: 120px; */
   transition: all 0.3s ease;
 }
 
-/* Zoom the main active slide */
-#photos .swiper-slide-active img {
-  transform: scale(1.1);
-  overflow: visible;
-  z-index: 10; /* Ensure it stays on top of neighbors */
+
+/* =============== Photo Section ================= */
+#photos .mySwiper {
+  transform: translateX(-15%);
 }
 
-#photos .swiper-slide-active  {
-  padding: 0 10px; /* Add horizontal padding to create space for the zoom */
-  z-index: 5;
-  overflow: visible; /* Ensure the zoomed image can overflow without being cut off */
+#photos .swiper {
+  overflow: visible !important;
 }
 
-/* Optional: If you want the "next" slide also slightly zoomed */
-#photos .swiper-slide-next {
-  transform: scale(1.05);
+/* ডিফল্ট স্লাইড স্টাইল (সবগুলো ছোট থাকবে) */
+#photos .swiper-slide {
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Ensure images fill the container nicely */
+#photos .img-wrapper {
+  transition: transform 0.5s ease-in-out;
+  transform: scale(0.85); /* ছোট স্লাইড */
+  width: 100%;
+}
+
+/* Active এবং তার পরের স্লাইড (জোড়া) বড় হবে */
+#photos .swiper-slide-active .img-wrapper,
+#photos .swiper-slide-next .img-wrapper {
+  transform: scale(1.15) !important; /* ডিজাইন অনুযায়ী স্কেল সেট করুন */
+  z-index: 10;
+}
+
+#photos .swiper-slide-active .img-wrapper {
+  margin-right: 35px;
+}
+
+#photos .swiper-slide-next .img-wrapper {
+  margin-left: 35px;
+}
+
 #photos .swiper-slide img {
-  display: block;
   width: 100%;
   height: auto;
-  transition: transform 0.5s ease;
+  border-radius: 20px;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+  object-fit: cover;
 }
+
+
+

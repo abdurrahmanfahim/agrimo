@@ -54,7 +54,7 @@ const About: React.FC = () => {
           </p>
 
           <div className="flex flex-wrap xl:flex-nowrap gap-12 mt-12.5 items-center justify-center ">
-            <div className="max-w-72.5 ">
+            <div className="max-w-72.5 flex flex-col items-center md:items-start text-center md:text-start  ">
               <Image
                 src={"/images/shapes/wall.svg"}
                 alt="about-image-1"
@@ -69,7 +69,7 @@ const About: React.FC = () => {
                 majority have suffered.
               </p>
             </div>
-            <div className="max-w-72.5 ">
+            <div className="max-w-72.5 flex flex-col items-center md:items-start text-center md:text-start  ">
               <Image
                 src={"/images/shapes/machine.svg"}
                 alt="about-image-1"

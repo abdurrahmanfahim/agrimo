@@ -106,7 +106,7 @@ const Service = () => {
         modules={[FreeMode, Pagination]}
         className="mySwiper max-w-350 mx-auto sm:h-102.5 h-75  "
       >
-        {services.map(({ id, tag, title, image, link }, index) => (
+        {services.map(({ tag, title, image, link }, index) => (
           <SwiperSlide
             className={`relative max-w-90 lg:max-w-82 bg-[url(/images/shapes/services-card-shape.svg)] bg-no-repeat bg-center bg-contain cursor-pointer `}
             key={`${title}-${index}`}
