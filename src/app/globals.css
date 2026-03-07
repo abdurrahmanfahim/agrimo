@@ -133,7 +133,6 @@ line-height: 120px; */
   transition: all 0.3s ease;
 }
 
-
 /* =============== Photo Section ================= */
 #photos .mySwiper {
   transform: translateX(-15%);
@@ -153,18 +152,21 @@ line-height: 120px; */
 
 #photos .img-wrapper {
   transition: transform 0.5s ease-in-out;
-  transform: scale(0.85); /* ছোট স্লাইড */
+  transform: scale(0.85); 
   width: 100%;
 }
 
-/* Active এবং তার পরের স্লাইড (জোড়া) বড় হবে */
+
 #photos .swiper-slide-active .img-wrapper,
 #photos .swiper-slide-next .img-wrapper {
-  transform: scale(1.15) !important; /* ডিজাইন অনুযায়ী স্কেল সেট করুন */
+  transform: scale(1.15) !important; 
   z-index: 10;
 }
 
 #photos .swiper-slide-active .img-wrapper {
+  transform: scale(1.15) !important;
+  z-index: 10;
+  margin: 0 auto;
   margin-right: 35px;
 }
 
@@ -180,5 +182,35 @@ line-height: 120px; */
   object-fit: cover;
 }
 
+@media (min-width: 1024px) {
+  #photos .swiper-slide-next .img-wrapper {
+    transform: scale(1.15) !important;
+    z-index: 10;
+    margin-left: 35px; /* আপনার দেওয়া ডেক্সটপ গ্যাপ */
+  }
 
+  #photos .swiper-slide-active .img-wrapper {
+    margin-right: 35px;
+    margin-left: 0;
+  }
 
+  #photos .mySwiper {
+    transform: translateX(-15%);
+  }
+}
+
+@media (max-width: 1023px) {
+  #photos .mySwiper {
+    transform: translateX(0);
+  }
+
+  #photos .swiper-slide-next .img-wrapper {
+    margin-left: 0 !important;
+    transform: scale(0.85) !important;
+  }
+
+    #photos .swiper-slide-active .img-wrapper {
+    margin-right: 0 !important;
+  }
+
+}

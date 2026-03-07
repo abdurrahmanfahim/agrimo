@@ -41,7 +41,7 @@ const Benefits: React.FC = () => {
       <section className="flex gap-3 md:gap-6 mb-3 md:mb-6 flex-wrap justify-center ">
         {benefitsData.map((benefit) => (
           <div
-            className="relative w-full max-w-90 lg:max-w-111 aspect-444/280 bg-[url(/images/shapes/benefits-shape.svg)] bg-no-repeat bg-center bg-contain flex items-center justify-center cursor-pointer"
+            className="relative w-full max-w-90 lg:max-w-111 aspect-444/280 bg-[url(/images/shapes/benefits-shape.svg)] bg-no-repeat bg-center bg-contain flex items-center justify-center "
             key={benefit.title}
           >
             <div className="py-4 sm:py-11 px-3 sm:px-8.5 w-full h-full flex flex-col items-start justify-center">

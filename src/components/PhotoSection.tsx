@@ -8,27 +8,22 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 const PhotoSection = () => {
   return (
-    <section id="photos" className="m-10  ">
+    <section id="photos" className="mt-10 mb-36 ">
       <Swiper
-        slidesPerView={2}
+        slidesPerView={1.5} // মোবাইলে ১.৫ দিলে একটিভটি সেন্টারে থাকবে
         centeredSlides={true}
-        spaceBetween={10} // ফিগমা অনুযায়ী গ্যাপ এখানে সেট করুন
+        spaceBetween={20}
         loop={true}
         speed={800}
-        slidesPerGroup={2}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
+        slidesPerGroup={1} // মোবাইলে ১টি করে স্লাইড মুভ করা বেটার
+        autoplay={{ delay: 2500, disableOnInteraction: false }}
         modules={[Autoplay]}
         breakpoints={{
-          640: {
-            slidesPerView: 2.5,
-            slidesPerGroup: 2,
-          },
+          // md এবং তার উপরে (Desktop/Tablet)
           1024: {
             slidesPerView: 3.5,
             slidesPerGroup: 2,
+            spaceBetween: 10,
           },
         }}
         className="mySwiper py-12"

@@ -62,9 +62,9 @@ const Navbar: React.FC = () => {
         </span>
 
         <div className="flex items-center gap-10 2xl:gap-15 pl-10 xl:py-0 py-1 ">
-          <span>
+          <Link href="/">
             <Image src={logo} alt="logo-agrimo" />
-          </span>
+          </Link>
           <nav>
             <ul
               className={`hidden xl:flex font-signika font-semibold text-sm  text-white uppercase `}
@@ -100,7 +100,7 @@ const Navbar: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-center rounded-full bg-background p-4 ">
+              <div className="flex items-center rounded-full bg-background p-4 text-black ">
                 <SearchIcon />
               </div>
             </div>
